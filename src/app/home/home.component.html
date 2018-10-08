@@ -1,0 +1,9 @@
+﻿<h3>All registered users</h3>
+<ul>
+    <li *ngFor="let user of users" style="margin-bottom: 16px;">
+        <span class="username" style="display: block; margin-bottom: 10px;"> <b> UserName:</b> {{user.username}} </span>
+         <span class="fullname"> <b>User Full Name:</b> {{user.firstName}} {{user.lastName}}</span>
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p>
